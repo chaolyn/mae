@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha - Cartões Rede</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        td {
+            font-size: 16px;
+        }
+        .print-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto 30px auto;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .print-btn:hover {
+            background-color: #004494;
+        }
+        
+        /* Regras específicas para a hora da impressão */
+        @media print {
+            body { 
+                margin: 0; 
+                padding: 20px; 
+            }
+            .print-btn { 
+                display: none; /* Esconde o botão na folha impressa */
+            }
+            th {
+                background-color: #e0e0e0 !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir Planilha</button>
+
+    <div class="header-info">
+        <div class="date">26 de Fevereiro, Quinta-feira</div>
+        <h1>Cartões Rede</h1>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>CNPJ</th>
+                <th>Nº Estabelecimento</th>
+                <th>Local / Observação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>02.859.607/0005-80</td>
+                <td>37196170</td>
+                <td>Guamiranga</td>
+            </tr>
+            <tr>
+                <td>02.859.607/0004-08</td>
+                <td>30219507</td>
+                <td>Imbituva</td>
+            </tr>
+            <tr>
+                <td>02.859.607/0001-57</td>
+                <td>10303065</td>
+                <td>24HRS</td>
+            </tr>
+            <tr>
+                <td>02.859.607/0003-19</td>
+                <td>21580880</td>
+                <td>Osório</td>
+            </tr>
+            <tr>
+                <td>72.085.756/0001-91</td>
+                <td>14272849</td>
+                <td>Matriz</td>
+            </tr>
+            <tr>
+                <td>72.085.756/0002-72</td>
+                <td>16504798</td>
+                <td>Filial 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
